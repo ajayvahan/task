@@ -1,0 +1,29 @@
+/*html,body{
+	width: 100%;
+	height:100%;
+}*/
+/*background image class*/
+/*.bg{
+	background-image: url("../images/theme.jpg")!important;
+	background-size: cover;
+	width:100%;
+	height: 100%;
+	position: absolute;
+}
+*/
+/*jumbotron margin adjust*/
+.blank{
+	margin-top: 15%;
+	/*margin-bottom: 10%;*/
+	/*background: rgba(179,179,204,0.3);*/
+}
+
+.profile_pic{
+	width: 200px;
+	height: 200px;
+}
+
+/*text color
+.white{
+	color:white;
+}*/

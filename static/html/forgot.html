@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+ <head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Forgot page</title>
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+
+ </head>
+<body>
+
+<div class="container">
+	<div class="jumbotron">
+ 		<div class="row">
+			<div class="col-md-12">
+			
+				<form class="form-horizontal" action="../../cgi-bin/app/forgot.py" role="form" method="post">
+
+					<div class="page-header">
+	                    <h2>Find you account.</h2>
+					</div>
+
+					<!-- Enter your email id -->
+					<div class="form-group">
+						<div class="col-md-6 col-sm-12">
+							<label for="email">
+							Enter your email id
+						</label>
+						<input type="email" class="form-control" name="email" id="email" required />
+						</div>					
+					</div>
+					<!-- Submit -->
+					<div class="col-md-6">
+						<input type="submit" class="btn btn-success btn-lg " value="Submit" />
+					</div>	
+					
+				</form >
+				
+
+			</div>
+	     </div>	
+	</div> <!-- close jumbotron-->
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>-->
+<script src="../js/jquery.min.js"></script>
+<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>-->
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</html>

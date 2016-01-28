@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+ 	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<title>Sign up page</title>
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+
+ 	</head>
+<body>
+	<div class="container">
+		<div class="row">
+		 	<div class="col-md-12">
+				<div class="page-header">
+					<h2>Register here.</h2>
+				</div>
+			</div>
+		</div>
+        
+        <div class="col-md-8">
+		<div class="alert alert-danger">
+			<strong>Error!</strong> {8}
+		</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-8">
+				<div class="jumbotron">
+					<form class="form-horizontal" action="../../cgi-bin/app/signup.py" role="form" method="post">
+						<div class="form-group">
+							<div>
+								<label>
+								Name
+							    </label>
+							</div>
+							<div class="form-group">
+								<div class="col-md-6 col-xs-12">
+									<input type="text" class="form-control" name="first_name" id="first_name" placeholder="First name" value="{0}" autofocus />
+								</div>
+							<!-- </div> -->
+
+							<!-- <div class="form-group"> -->						
+								<div class="col-md-6 ">
+									<input type="text" class="form-control" name="last_name" id="last_name" placeholder="Last name" value="{1}"/>
+								</div>
+							</div>
+						<!-- User name -->
+							<div class="form-group">
+								<div class="col-md-6 ">
+									<label>
+										User name
+									</label>
+							
+										<input type="text" class="form-control" name="username" id="username" value="{2}"/>
+								</div>
+							</div>
+							
+						<!-- Create a password -->
+							<div class="form-group">
+								<div class="col-md-7 ">
+									<label>
+										Create a password
+									</label>
+									<input type="password" class="form-control" name="password" id="password" />
+
+								</div >
+							</div>	
+							
+						<!-- Confirm your password -->
+							<div class="form-group">
+								<div class="col-md-7 ">
+									<label>
+										Confirm your password
+									</label>
+									<input type="password" class="form-control" name="confirm_password"id="confirm_password" />
+									</div>
+							</div>
+							
+						<!-- Gender -->
+							<div class="form-group">
+								<div class="col-md-12">
+									<label>
+										Gender
+									</label>
+									<div>
+										<label class="control-radio-inline">
+											<input type="radio" name="gender" value="male" {3}> Male
+								   		</label>
+										<label class="control-radio-inline">
+											<input type="radio" name="gender" value="female" {4}/> Female
+										</label>
+									</div>
+								
+								</div>
+							</div>
+							
+							
+						<!-- Date of Birth -->
+							<div class="form-group">
+								<div class="col-md-4 ">
+									<label>
+									Date of Birth
+									</label>
+							 			<input type="text" class="form-control"  placeholder="yyyy-mm-dd" name="dob" id="date"  value="{5}" required/>
+								</div>
+								
+							</div>
+
+						<!--email-->
+							<div class="form-group">
+								<div class="col-md-6 ">
+									<label>
+						    			Your current email address
+						    		</label>
+						    			<input type="text" class="form-control" name="email" id="email" value="{6}" required/>
+								</div>
+							</div>
+
+						<!-- Mobile phone -->
+							<div class="form-group">
+								<div class="col-md-6 ">
+									<label>
+						    			Mobile phone
+						    		</label>
+						    			<input type="text" class="form-control" name="mobile" id="mobile" value="{7}" required/>
+								</div>
+							</div>
+
+							
+
+						    
+						<!--File-->
+							<div class="form-group">
+								<div class="col-md-6 ">
+									<label>
+						    			<input type="checkbox" id="terms" name="term_condition" value="yes" required />
+						    				I accept all terms and conditions 
+						    		</label>
+								</div>
+							</div>
+
+							<div class="form-group">
+								<div class="col-md-6 ">
+									<input type="submit" class="btn btn-success btn-lg " value="Submit" />
+
+								</div>
+							</div>
+						    
+						    
+
+						    
+
+						</div>
+
+					</form>
+
+				</div>
+
+			</div>
+		</div>
+		<div class="col-md-4">
+		</div>
+	</div>
+</div>
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>-->
+<script src="../js/jquery.min.js"></script>
+<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>-->
+<script src="../js/bootstrap.min.js"></script>
+
+
+</body>
+</html>
