@@ -9,7 +9,7 @@ function error_call_radio(element_id,txt){
 }
 
 $(document).ready(function(){
-	$("input").keypress(function(){
+	$("input,textarea").keypress(function(){
 		$(this).parent().removeClass("has-error has-feedback");
 		$(this).next().removeClass("glyphicon glyphicon-remove form-control-feedback");
 		$(this).next().next().html('');
@@ -20,40 +20,31 @@ $(document).ready(function(){
 	$("#submit").on("click", function(){
 		var first_name = $.trim($("#first_name").val());
 		var last_name = $.trim($("#last_name").val());
-		var username = $.trim($("#username").val());
-		var password = $("#password").val();
-		var confirm_password = $("#confirm_password").val();
 		var dob = $.trim($("#dob").val());
-		var email = $.trim($("#email").val());
 		var mobile = $.trim($("#mobile").val());
+		var address = $.trim($("#address").val());
+		var street = $.trim($("#street").val());
+		var city = $.trim($("#city").val());
+		var zip =$.trim($("#zip").val());
+		var image = $("#image").val();
+		var end = image.substring(image.lastIndexOf('.') + 1);
 		var error_flag=1;
+
+
 		var text="";
-
-		var pattern_alpha=/^[A-Za-z]+$/;
-		var pattern_date=/^\d{4}-\d{1,2}-\d{1,2}$/;
-		var pattern_email=/^([a-zA-Z0-9.])+@(([a-zA-Z0-9-])+.)+([a-zA-Z0-9]{2,4})+$/g;
-		var pattern_mobile=/^[0-9]{10}$/g;
-
+		pattern_alpha=/^[A-Za-z]+$/;
+		pattern_date=/^\d{4}-\d{1,2}-\d{1,2}$/;
+		pattern_mobile=/^[0-9]{10}$/g;
+		pattern_zip=/^[0-9]{6}$/g;
+		
 
 		if (first_name == "" || first_name == "None" || !first_name.match(pattern_alpha)){
 			error_call('#first_name','Please enter first name field and use alphabets only');
 			error_flag=0;
-		
 		}
+
 		if (last_name == "" || last_name == "None" || !last_name.match(pattern_alpha)){
 			error_call('#last_name','Please enter last name field and use alphabets only');
-			error_flag=0;
-		}
-		if (username == "" || username == "None"){
-			error_call('#username','Please enter username field');
-			error_flag=0;
-		}
-		if (password == "" || password == "None"){
-			error_call('#password','Please enter password field');
-			error_flag=0;
-		}
-		if (confirm_password == "" || confirm_password == "None"){
-			error_call('#confirm_password','Please enter confirm password field');
 			error_flag=0;
 		}
 		if(!$('input[name=gender]:checked').val()) {
@@ -64,26 +55,41 @@ $(document).ready(function(){
 			error_call('#dob','Date of birth field invalid, please enter in YYYY-MM-DD format');
 			error_flag=0;
 		}
-		if (email == "" || email == "None" || !email.match(pattern_email)){
-			error_call('#email','Invalid email address, please enter valid email address');
-			error_flag=0;
-		}
 		if (mobile == "" || mobile == "None" || !mobile.match(pattern_mobile)){
 			error_call('#mobile','Please enter mobile number and mobile should contain 10 digits only');
 			error_flag=0;
 		}
-		else if (password != confirm_password){
-			error_call('#password',"password didn't match");
-			error_call('#confirm_password',"password didn't match");
+		if (address == "" || address == "None"){
+			error_call('#address','Please enter address field');
 			error_flag=0;
-			
 		}
-		if (error_flag){
-			return true;
+		if (street == "" || street == "None" || !street.match(pattern_alpha)){
+			error_call('#street','Please enter street field and use alphabets only');
+			error_flag=0;
 		}
-		else{
-			return false;	
+		if (city == "" || city == "None" || !city.match(pattern_alpha)){
+			error_call('#city','Please enter city field and use alphabets only');
+			error_flag=0;
 		}
+		if (zip == "" || zip == "None" || !zip.match(pattern_zip)){
+			error_call('#zip','Please enter zip field and zip code should contain 6 digits only');
+			error_flag=0;
+		}
+		if( !(end == "JPEG" || end == "jpeg" || end == "jpg" || end == "JPG" || end == "png" || end == "PNG" || end == "gif" || end == "GIF") && (image != "") ) {
+			alert("Only JPG, PNG and GIF images are allowed for profile picture");
+			$("#image").next().removeClass("help-block");
+			$("#image").next().addClass("text-danger");
+			$("#image").next().html("Only JPG, PNG and GIF images are allowed for profile picture")
+			error_flag=0;
+				
+		}
+
+			if (error_flag){
+				return true;
+			}
+			else{
+				return false;	
+			}
 
 	});
 });
