@@ -22,6 +22,12 @@
 	width: 200px;
 	height: 200px;
 }
+.image_div{
+	margin-top: 6%;
+}
+.image_edit_div{
+	margin-top: 8%
+}
 
 /*text color
 .white{
