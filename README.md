@@ -12,7 +12,7 @@ HTML, CSS, Bootstrap, JS, Jquery, Ajax
 
 Backend:
 --------
-Core Python, MySQL
+Python, MySQL, CGI
 
 Note: Please keep the 'cgi-bin' and 'static' folder inside '/var/www/html/' directory and make 
 sure that your Web Server supports CGI and it is configured to handle CGI Programs.
