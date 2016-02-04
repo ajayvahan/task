@@ -5,8 +5,8 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
 		<meta name="viewport" content="width=device-width,initial-scale=1">
 		<title>Profile page</title>
-	<link rel="stylesheet" type="text/css" href="../../static/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="../../static/css/custom.css">
+		<link rel="stylesheet" type="text/css" href="../../static/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="../../static/css/custom.css">
 
  	</head>
 <body>
@@ -32,7 +32,7 @@
 						<div class="form-group">
 							<input class="form-control" type="text" />
 						</div> 
-						<button type="submit" class="btn btn-default">
+						<button type="button" class="btn btn-default">
 							Submit
 						</button>
 					</form>
@@ -81,10 +81,6 @@
 		<div class="col-md-2">
 		</div>
 		<div class="col-md-6">
-
-
-
-			<!-- <div class="jumbotron"> -->
 					<form class="form-horizontal" enctype="multipart/form-data"  action="edit2.py" role="form" method="post">
 						<div class="col-md-12">
 				<div class="page-header">
@@ -96,7 +92,8 @@
 			<strong>{18}</strong>{19}
 		</div>
 		</div>
-						<div class="form-group">								
+						<div class="form-group">
+								<!-- First name-->								
 								<div class="col-md-6 col-xs-12">
 									<label>
 									First name
@@ -105,10 +102,8 @@
 									<span></span>
 									 <div></div>
 						        </div>
-						<!-- </div>
 
-
-							<div class="form-group"> -->						
+						        <!-- Last name -->					
 								<div class="col-md-6 ">
 									<label>
 									Last name
@@ -117,11 +112,9 @@
 									<span></span>
 									 <div></div>
 								</div>
-							</div>
-						
+						</div>	
 							
-							
-						<!-- Gender -->
+							<!-- Gender -->
 							<div class="form-group">
 								<div class="col-md-12">
 									<label>
@@ -135,13 +128,11 @@
 											<input type="radio" name="gender" id="gender_female"  value="female" {3}/> Female
 										</label>
 									<div id="div_gender"></div>
-									</div>
-								
+									</div>	
 								</div>
 							</div>
 							
-							
-						<!-- Date of Birth -->
+							<!-- Date of Birth -->
 							<div class="form-group">
 								<div class="col-md-4 ">
 									<label>
@@ -154,9 +145,7 @@
 								
 							</div>
 
-						
-
-						<!-- Mobile phone -->
+							<!-- Mobile phone -->
 							<div class="form-group">
 								<div class="col-md-6 ">
 									<label>
@@ -167,12 +156,8 @@
 									    <div></div>
 								</div>
 							</div>
-
-						
-
-						
-
-						<!-- marital status-->
+											
+							<!-- marital status-->
 							<div class="form-group">
 								<div class="col-md-6 ">
 									<label>
@@ -185,7 +170,7 @@
 								</div>
 							</div>
 
-						<!-- Employment-->
+							<!-- Employment-->
 							<div class="form-group">
 								<div class="col-md-6 ">
 									<label>
@@ -195,12 +180,11 @@
 					  					<option value="student" {8} >student</option>
 					  					<option value="working" {9} >working</option>
 					  					<option value="not working" {10} >not Working</option>
-									</select>
-									
+									</select>		
 								</div>
 							</div>
 
-						<!--Address-->
+							<!--Address-->
 							<div class="form-group">
 								<div class="col-md-6 ">
 									<label>Address:</label>
@@ -208,12 +192,11 @@
 							  				<textarea class="form-control" id="address" name="address"  rows="" cols="">{11}</textarea>
 							  				<span></span>
 									        <div></div>
-										</div>
-																
+										</div>					
 								</div>
 							</div>
 
-						<!--Street-->
+							<!--Street-->
 							<div class="form-group">
 								<div class="col-md-6 ">
 									<label>Street:</label>
@@ -221,12 +204,11 @@
 							  				<input type="text" class="form-control" name="street" value="{12}"id="street" placeholder="Enter Street">
 							  				<span></span>
 									        <div></div>
-										</div>
-									
+										</div>		
 								</div>
 							</div>
 
-						<!-- City-->
+							<!-- City-->
 							<div class="form-group">
 								<div class="col-md-6 ">
 									<label>City:</label>
@@ -234,8 +216,7 @@
 							  				<input type="text" class="form-control" name="city" value="{13}" id="city" placeholder="Enter Street">
 							  				<span></span>
 									        <div></div>
-										</div>
-																
+										</div>					
 								</div>
 							</div>
 
@@ -248,7 +229,6 @@
 							  				<span></span>
 									        <div></div>
 										</div>
-									
 								</div>
 							</div>
 
@@ -263,36 +243,21 @@
 										<p class="help-block">
 											This image is used as your profile picture.
 										</p>
+									</div>
 								</div>
 							</div>
-							</div>
-
-
 
 							<input type="hidden" name="pk_id" value="{15}"/>
 
-
 							<div class="form-group">
-								<div class="col-md-6 ">
-									
+								<div class="col-md-6 ">									
 										<input type="submit" id="submit" class="btn btn-success btn-lg " value="Save" />
-									
-
 								</div>
 							</div>				
-						       
-
-						
-
 					</form>
-
-				<!-- </div> -->
 		</div>
 	</div>
 </div>
-
-
-
 
 <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>-->
 <script src="../../static/js/jquery.min.js"></script>

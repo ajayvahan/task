@@ -1,96 +1,109 @@
 #!/usr/bin/python
-"""Edit profile page"""
+"""Edit profile page."""
+
+import cgi
 
 import MySQLdb
-import cgi, cgitb 
-import smtplib
-
-# Create instance of FieldStorage 
-form = cgi.FieldStorage() 
-
-db = MySQLdb.connect("localhost","root","mindfire","assignment")
-
-# setup a cursor object using cursor() method
-cursor = db.cursor()
 
 
-pk_id= form.getvalue('pk_id')
+def edit():
+    """Edit Profile and Upload image.
 
+    Opening edit profile page where user can update their details and
+    can also upload image to the server.
+    """
+    # Create instance of FieldStorage
+    form = cgi.FieldStorage()
 
-print "Content-type:text/html\r\n\r\n"
-print
+    # Connecting to database
+    db = MySQLdb.connect("localhost", "root", "mindfire", "assignment")
 
-try:
-	sql="SELECT  first_name,last_name,gender,dob,mobile,marital,employment,address,street,city,zip,image FROM user_detail WHERE pk_id={0}".format(pk_id)
-	cursor.execute(sql)
+    # setup a cursor object using cursor() method
+    cursor = db.cursor()
 
-	for row in cursor.fetchall():
-		first_name=row[0]
-		last_name=row[1]
-		gender=row[2]
-		dob=row[3]
-		mobile=row[4]
-		marital=row[5]
-		employment=row[6]
-		address=row[7]
-		street=row[8]
-		city=row[9]
-		zip_code=row[10]
-		image=row[11]
+    # GET value from profile page form and assinging them in varable
+    pk_id = form.getvalue('pk_id')
 
-	if marital=="single":
-		single="selected"
-	else:
-		single=" "
+    # HTTP header which is sent to the browser to understand the content.
+    print "Content-type:text/html\r\n\r\n"
+    print
 
-	if marital=="married":
-		married="selected"
-	else:
-		married=" "
+    try:
+        sql = "SELECT  first_name,last_name,gender,dob,mobile,marital,employment,\
+                address,street,city,zip,image \
+                FROM user_detail WHERE pk_id={0}".format(pk_id)
+        cursor.execute(sql)
 
-	if gender=="male":
-		male="checked"
-	else:
-		male=" "
+        for row in cursor.fetchall():
+            first_name = row[0]
+            last_name = row[1]
+            gender = row[2]
+            dob = row[3]
+            mobile = row[4]
+            marital = row[5]
+            employment = row[6]
+            address = row[7]
+            street = row[8]
+            city = row[9]
+            zip_code = row[10]
+            image = row[11]
 
-	if gender=="female":
-		female="checked"
-	else:
-		female=" "
+        # Check marital dropdown and if selected assigning them to variables
+        if marital == "single":
+            single = "selected"
+        else:
+            single = " "
 
-	if employment=="student":
-		student="selected"
-	else:
-		student=" "
+        if marital == "married":
+            married = "selected"
+        else:
+            married = " "
 
-	if employment=="working":
-		working="selected"
-	else:
-		working=" "
+        # Check gender radio field and if checked assigng them to variables
+        if gender == "male":
+            male = "checked"
+        else:
+            male = " "
 
-	if employment=="not working":
-		not_working="selected"
-	else:
-		not_working=" "
+        if gender == "female":
+            female = "checked"
+        else:
+            female = " "
 
+        # Check employment dropdown and if selected assigning them to variables
+        if employment == "student":
+            student = "selected"
+        else:
+            student = " "
 
+        if employment == "working":
+            working = "selected"
+        else:
+            working = " "
 
+        if employment == "not working":
+            not_working = "selected"
+        else:
+            not_working = " "
 
+        # open edit.txt and passing value in the page
+        fh = open('../../static/html_data/edit.txt')
+        for line in fh:
+            print ''.join(line).format(
+                first_name, last_name, male, female,
+                dob, mobile, single, married, student,
+                working, not_working, address, street,
+                city, zip_code, pk_id, image)
 
-	
+    except Exception as e:
 
+        # open message.txt and passing value in the page
+        fh = open('../../static/html_data/message.txt')
+        for line in fh:
+            print ''.join(line).format("Oops... Error", e)
 
+    # close the mysql database connection
+    db.close()
 
-
-	
-	fh=open('../../static/html_data/edit.txt')
-	for line in fh:
-		print ''.join(line).format(first_name,last_name,male,female,dob,mobile,single,married,student,working,not_working,address,street,city,zip_code,pk_id,image)
-
-except Exception as e:
-	fh=open('../../static/html_data/message.txt')
-	for line in fh:
-		print ''.join(line).format("Oops... Error",e)
-
-# close the mysql database connection
-db.close()
+# Calling edit function
+edit()

@@ -45,6 +45,13 @@ $(document).ready(function(){
 				dataType: "json",
 				url: "/cgi-bin/app/login.py",
 				data : $("#myForm").serialize(),
+				beforeSend: function(){
+                    $("#loading").show();
+                },
+                complete: function(){
+                    $("#loading").hide();
+                },
+
 
 				success: function(data) {
 					console.log(data);
@@ -66,7 +73,6 @@ $(document).ready(function(){
 							return false;	
 						}
 						else if(data['status'] == 'error'){
-							alert(data['message']);
 							error_call("#username","wrong username or password");
 							error_call("#password","wrong username or password");
 							error_flag = 1;

@@ -5,25 +5,21 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
 		<meta name="viewport" content="width=device-width,initial-scale=1">
 		<title>Login page</title>
-	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="../css/custom.css">
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="../css/custom.css">
 	
  	</head>
 	<body>
 
 		<div class="container">
-			
 			<div class="row">
 				<div class="col-md-3 ">
 				</div>
 				<div class="col-md-6">
-
 					<div class="jumbotron blank">
  						<div class="row">
 							<div class="col-md-12">
-			
 								<form action="/cgi-bin/app/login.py" id = "myForm" name="login-form" method="post">
-
 									<div class="page-header">
 	                                		<h2>Please login.</h2>
 									</div>
@@ -33,10 +29,11 @@
 											<div></div>
 										</div>
 									</div>
-
+									
+									<!-- User name -->
 									<div class="form-group">
 									<div class=" has-feedback">
-					 
+
 										<label for="username">
 											User name
 										</label>
@@ -46,9 +43,9 @@
 									</div>
 									</div>
 
+									<!-- Password -->
 									<div class="form-group">
 									<div class="has-feedback">
-					 
 										<label for="password">
 											Password
 										</label>
@@ -58,17 +55,11 @@
 									 </div>
 									</div>
 
-
 									<div class="form-group"><br>
 									</div>
-
-
 						
 									<span class="col-md-6 ">
-
-										
-										<button type="submit" id ="login_submit" class="btn btn-primary btn-lg btn-block">Log in</button>
-					
+										<button type="submit" id ="login_submit" class="btn btn-primary btn-lg btn-block">Log in <span id="loading"><img class="gif" src="../images/loading.gif" /></span></button>
 									</span>
 
 									<span class="col-md-6 ">
@@ -77,34 +68,16 @@
 									<span class="col-sm-12">
 										<p class="text-right"><a href="forgot.html"><br>forgot password</a></p>
 									</span>
-							
-					
-								</form >
-				
- 						
+								</form >		
 							</div>
 	     				 </div>	
-			
-		
 					</div> <!-- close jumbotron-->
 				</div>
-
-
 			</div>
 				<div class="col-md-3">
 				</div>
-			</div>
-			
 		</div>
-
-
-
-
-
-
-
-
-
+		</div>
 
 		<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>-->
 		<script src="../js/jquery.min.js"></script>
@@ -112,9 +85,6 @@
 		<script src="../js/bootstrap.min.js"></script>
 
 		<script type="text/javascript" src="../js/login_validate_jquery.js"></script>
-
-
-
 
 	</body>
 </html>

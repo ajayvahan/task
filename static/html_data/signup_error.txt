@@ -5,187 +5,177 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
 		<meta name="viewport" content="width=device-width,initial-scale=1">
 		<title>Sign up page</title>
-	<link rel="stylesheet" type="text/css" href="../../static/css/bootstrap.min.css">
+	 	<link rel="stylesheet" type="text/css" href="../../static/css/bootstrap.min.css">
 
  	</head>
-<body>
-	<div class="container">
-		<div class="row">
-		 	<div class="col-md-12">
-				<div class="page-header">
-					<h2>Register here.</h2>
+	<body>
+		<div class="container">
+			<div class="row">
+			 	<div class="col-md-12">
+					<div class="page-header">
+						<h2>Register here.</h2>
+					</div>
 				</div>
 			</div>
-		</div>
-        
-        <div class="col-md-8">
-		<div class="alert alert-danger">
-			<strong>Error!</strong> {8}
-		</div>
-		</div>
+	        
+	        <div class="col-md-8">
+			<div class="alert alert-danger">
+				<strong>Error!</strong> {8}
+			</div>
+			</div>
 
-		<div class="row">
-			<div class="col-md-8">
-				<div class="jumbotron">
-					<form class="form-horizontal" action="signup.py" name="myFrom" role="form" method="post">
-						<div class="form-group">
-							<div>
-								<label>
-								Name
-							    </label>
-							</div>
+			<div class="row">
+				<div class="col-md-8">
+					<div class="jumbotron">
+						<form class="form-horizontal" action="signup.py" name="myFrom" role="form" method="post">
 							<div class="form-group">
-								<div class="col-md-6 col-xs-12">
-									<input type="text" class="form-control" name="first_name" id="first_name" placeholder="First name" value="{0}" autofocus />
-									<span></span>
-									<div></div>
-								</div>
-							<!-- </div> -->
-
-							<!-- <div class="form-group"> -->						
-								<div class="col-md-6 ">
-									<input type="text" class="form-control" name="last_name" id="last_name" placeholder="Last name" value="{1}"/>
-									<span></span>
-									<div></div>
-								</div>
-							</div>
-						<!-- User name -->
-							<div class="form-group">
-								<div class="col-md-6 ">
+								<div>
 									<label>
-										User name
-									</label>
-							
-										<input type="text" class="form-control" name="username" id="username" value="{2}"/>
+									Name
+								    </label>
+								</div>
+								<!-- First name -->
+								<div class="form-group">
+									<div class="col-md-6 col-xs-12">
+										<input type="text" class="form-control" name="first_name" id="first_name" placeholder="First name" value="{0}" autofocus />
 										<span></span>
-									<div></div>
+										<div></div>
+									</div>
+								
+								<!-- Last name -->					
+									<div class="col-md-6 ">
+										<input type="text" class="form-control" name="last_name" id="last_name" placeholder="Last name" value="{1}"/>
+										<span></span>
+										<div></div>
+									</div>
 								</div>
-							</div>
-							
-						<!-- Create a password -->
-							<div class="form-group">
-								<div class="col-md-7 ">
-									<label>
-										Create a password
-									</label>
-									<input type="password" class="form-control" name="password" id="password" />
-									<span></span>
-									<div></div>
 
-								</div >
-							</div>	
-							
-						<!-- Confirm your password -->
-							<div class="form-group">
-								<div class="col-md-7 ">
-									<label>
-										Confirm your password
-									</label>
-									<input type="password" class="form-control" name="confirm_password"id="confirm_password" />
-									<span></span>
-									<div></div>
-									</div>
-							</div>
-							
-						<!-- Gender -->
-							<div class="form-group">
-								<div class="col-md-12">
-									<label>
-										Gender
-									</label>
-									<div>
-										<label class="control-radio-inline">
-											<input type="radio" name="gender" id="gender_male" value="male" {3}> Male
-								   		</label>
-										<label class="control-radio-inline">
-											<input type="radio" name="gender" id="gender_female" value="female" {4}/> Female
+								<!-- User name -->
+								<div class="form-group">
+									<div class="col-md-6 ">
+										<label>
+											User name
 										</label>
-										<div id="div_gender"></div>
+								
+											<input type="text" class="form-control" name="username" id="username" value="{2}"/>
+											<span></span>
+										<div></div>
 									</div>
-								</div>
-							</div>
-							
-							
-						<!-- Date of Birth -->
-							<div class="form-group">
-								<div class="col-md-4 ">
-									<label>
-									Date of Birth
-									</label>
-							 			<input type="text" class="form-control"  name="dob" id="dob"  value="{5}" />
-							 			<span></span>
-									<div></div>
 								</div>
 								
-							</div>
+								<!-- Create a password -->
+								<div class="form-group">
+									<div class="col-md-7 ">
+										<label>
+											Create a password
+										</label>
+										<input type="password" class="form-control" name="password" id="password" />
+										<span></span>
+										<div></div>
 
-						<!--email-->
-							<div class="form-group">
-								<div class="col-md-6 ">
-									<label>
-						    			Your current email address
-						    		</label>
-						    			<input type="text" class="form-control" name="email" id="email" value="{6}" />
-						    			<span></span>
-									<div></div>
+									</div >
+								</div>	
+								
+								<!-- Confirm your password -->
+								<div class="form-group">
+									<div class="col-md-7 ">
+										<label>
+											Confirm your password
+										</label>
+										<input type="password" class="form-control" name="confirm_password"id="confirm_password" />
+										<span></span>
+										<div></div>
+										</div>
+								</div>
+								
+								<!-- Gender -->
+								<div class="form-group">
+									<div class="col-md-12">
+										<label>
+											Gender
+										</label>
+										<div>
+											<label class="control-radio-inline">
+												<input type="radio" name="gender" id="gender_male" value="male" {3}> Male
+									   		</label>
+											<label class="control-radio-inline">
+												<input type="radio" name="gender" id="gender_female" value="female" {4}/> Female
+											</label>
+											<div id="div_gender"></div>
+										</div>
+									</div>
+								</div>
+								
+								
+								<!-- Date of Birth -->
+								<div class="form-group">
+									<div class="col-md-4 ">
+										<label>
+										Date of Birth
+										</label>
+								 			<input type="text" class="form-control"  name="dob" id="dob"  value="{5}" />
+								 			<span></span>
+										<div></div>
+									</div>
+									
+								</div>
+
+								<!--email-->
+								<div class="form-group">
+									<div class="col-md-6 ">
+										<label>
+							    			Your current email address
+							    		</label>
+							    			<input type="text" class="form-control" name="email" id="email" value="{6}" />
+							    			<span></span>
+										<div></div>
+									</div>
+								</div>
+
+								<!-- Mobile phone -->
+								<div class="form-group">
+									<div class="col-md-6 ">
+										<label>
+							    			Mobile phone
+							    		</label>
+							    			<input type="text" class="form-control" name="mobile" id="mobile" value="{7}" />
+							    			<span></span>
+										<div></div>
+									</div>
+								</div>
+
+								
+
+							    
+								<!--terms-->
+								<div class="form-group">
+									<div class="col-md-6 ">
+										<label>
+							    			<input type="checkbox" id="terms" name="term_condition" value="yes" required />
+							    				I accept all terms and conditions 
+							    		</label>
+									</div>
+								</div>
+
+								<div class="form-group">
+									<div class="col-md-6 ">
+										<input type="submit" class="btn btn-success btn-lg" id="submit" value="Submit" />
+
+									</div>
 								</div>
 							</div>
-
-						<!-- Mobile phone -->
-							<div class="form-group">
-								<div class="col-md-6 ">
-									<label>
-						    			Mobile phone
-						    		</label>
-						    			<input type="text" class="form-control" name="mobile" id="mobile" value="{7}" />
-						    			<span></span>
-									<div></div>
-								</div>
-							</div>
-
-							
-
-						    
-						<!--terms-->
-							<div class="form-group">
-								<div class="col-md-6 ">
-									<label>
-						    			<input type="checkbox" id="terms" name="term_condition" value="yes" required />
-						    				I accept all terms and conditions 
-						    		</label>
-								</div>
-							</div>
-
-							<div class="form-group">
-								<div class="col-md-6 ">
-									<input type="submit" class="btn btn-success btn-lg" id="submit" value="Submit" />
-
-								</div>
-							</div>
-						    
-						    
-
-						    
-
-						</div>
-
-					</form>
-
+						</form>
+					</div>
 				</div>
-
+			</div>
+			<div class="col-md-4">
 			</div>
 		</div>
-		<div class="col-md-4">
-		</div>
-	</div>
-</div>
-<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>-->
-<script src="../../static/js/jquery.min.js"></script>
-<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>-->
-<script src="../../static/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="../../static/js/validate_jquery.js"></script>
-
-
-
-</body>
+		<!-- </div> -->
+		<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>-->
+		<script src="../../static/js/jquery.min.js"></script>
+		<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>-->
+		<script src="../../static/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="../../static/js/validate_jquery.js"></script>
+	</body>
 </html>

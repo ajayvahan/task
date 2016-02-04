@@ -5,12 +5,10 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
 		<meta name="viewport" content="width=device-width,initial-scale=1">
 		<title>Profile page</title>
-	<link rel="stylesheet" type="text/css" href="../../static/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="../../static/css/custom.css">
-
+		<link rel="stylesheet" type="text/css" href="../../static/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="../../static/css/custom.css">
  	</head>
 <body>
-
 	<div class="container-fluid">
 	<div class="row">
 		<div class="col-md-12">
@@ -32,7 +30,7 @@
 						<div class="form-group">
 							<input class="form-control" type="text" />
 						</div> 
-						<button type="submit" class="btn btn-default">
+						<button type="button" class="btn btn-default">
 							Submit
 						</button>
 					</form>
@@ -82,16 +80,15 @@
 		</div>
 		<div class="col-md-6">
 
-
-
-			<!-- <div class="jumbotron"> -->
 					<form class="form-horizontal" enctype="multipart/form-data" name="myFrom" action="edit2.py" role="form" method="post">
 						<div class="col-md-12">
-				<div class="page-header">
-					<h2>Edit your profile</h2>
-				</div>
-			</div>
-						<div class="form-group">								
+							<div class="page-header">
+								<h2>Edit your profile</h2>
+							</div>
+						</div>
+						<div class="form-group">
+
+								<!-- First name-->
 								<div class="col-md-6 col-xs-12">
 									<label>
 									First name
@@ -100,10 +97,8 @@
 									<span></span>
 									<div></div>
 						        </div>
-						<!-- </div>
 
-
-							<div class="form-group"> -->						
+						        <!-- Last name -->
 								<div class="col-md-6 ">
 									<label>
 									Last name
@@ -112,11 +107,9 @@
 									<span></span>
 									<div></div>
 								</div>
-							</div>
-						
-							
-							
-						<!-- Gender -->
+						</div>
+
+							<!-- Gender -->
 							<div class="form-group">
 								<div class="col-md-12">
 									<label>
@@ -145,11 +138,8 @@
 							 			<input type="date" class="form-control"  name="dob" value="{4}" id="dob"/>
 							 			<span></span>
 										<div></div>
-								</div>
-								
+								</div>		
 							</div>
-
-						
 
 						<!-- Mobile phone -->
 							<div class="form-group">
@@ -162,11 +152,7 @@
 										<div></div>
 								</div>
 							</div>
-
-						
-
-						
-
+	
 						<!-- marital status-->
 							<div class="form-group">
 								<div class="col-md-6 ">
@@ -191,7 +177,6 @@
 					  					<option value="working" {9} >working</option>
 					  					<option value="not working" {10} >not Working</option>
 									</select>
-									
 								</div>
 							</div>
 
@@ -203,8 +188,7 @@
 							  				<textarea class="form-control" id="address" name="address"  rows="" cols="">{11}</textarea>
 							  				<span></span>
 									        <div></div>
-										</div>
-																
+										</div>					
 								</div>
 							</div>
 
@@ -217,7 +201,6 @@
 							  				<span></span>
 											<div></div>
 										</div>
-									
 								</div>
 							</div>
 
@@ -229,8 +212,7 @@
 							  				<input type="text" class="form-control" name="city" value="{13}" id="city" placeholder="Enter Street">
 							  				<span></span>
 									  		<div></div>
-										</div>
-																
+										</div>					
 								</div>
 							</div>
 
@@ -243,7 +225,6 @@
 							  				<span></span>
 											<div></div>
 										</div>
-									
 								</div>
 							</div>
 
@@ -258,30 +239,20 @@
 										<p class="help-block">
 											This image is used as your profile picture.
 										</p>
+									</div>
 								</div>
 							</div>
-							</div>
-
-
 
 							<input type="hidden" name="pk_id" value="{15}"/>
-
 
 							<div class="form-group">
 								<div class="col-md-6 ">
 									
 										<input type="submit" id="submit" class="btn btn-success btn-lg " value="Save" />
-									
-
 								</div>
-							</div>				
-						       
-
-						
-
+							</div>			
 					</form>
-
-				<!-- </div> -->
+					
 		</div>
 	</div>
 </div>
